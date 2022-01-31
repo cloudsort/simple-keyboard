@@ -15,7 +15,7 @@
 -->
 
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="rkr.simplekeyboard.inputmethod">
+    package="com.cloudsort.keyboard">
 
     <uses-permission android:name="android.permission.VIBRATE" />
 
@@ -27,7 +27,7 @@
         android:supportsRtl="true">
 
         <service
-            android:name=".latin.LatinIME"
+            android:name="com.cloudsort.keyboard.latin.LatinIME"
             android:label="@string/english_ime_name"
             android:directBootAware="true"
             android:exported="false"
@@ -42,7 +42,7 @@
         </service>
 
         <activity
-            android:name=".latin.settings.SettingsActivity"
+            android:name="com.cloudsort.keyboard.latin.settings.SettingsActivity"
             android:label="@string/english_ime_name"
             android:exported="true"
             android:theme="@style/platformSettingsTheme">
@@ -53,7 +53,7 @@
         </activity>
 
         <receiver
-            android:name=".latin.SystemBroadcastReceiver"
+            android:name="com.cloudsort.keyboard.latin.SystemBroadcastReceiver"
             android:exported="false">
             <intent-filter>
                 <action android:name="android.intent.action.LOCALE_CHANGED" />
